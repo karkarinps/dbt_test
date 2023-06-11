@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: post_test
+    description: "first_source"
+    database: dbt_base
+    schema: public
+    tables:
+      - name: table_trans
+        description: "sinth_table"
