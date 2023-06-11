@@ -1,5 +1,13 @@
-{{ config(materialized='table') }}
-
-with source_trans as (select * from {{ source('post_test', 'table_trans') }})
-
-select * from source_trans
+WITH source_trans AS (
+    SELECT
+        *
+    FROM
+        {{ source(
+            'post_test',
+            'table_trans'
+        ) }}
+)
+SELECT
+    *
+FROM
+    source_trans
